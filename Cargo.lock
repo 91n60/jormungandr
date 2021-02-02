@@ -86,10 +86,11 @@ checksum = "eab1c04a571841102f5345a8fc0f6bb3d31c315dec879b5c6e42e40ce7ffa34e"
 
 [[package]]
 name = "assert_cmd"
-version = "1.0.2"
+version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3dc1679af9a1ab4bea16f228b05d18f8363f8327b1fa8db00d2760cfafc6b61e"
+checksum = "f2475b58cd94eb4f70159f4fd8844ba3b807532fe3131b3373fae060bbe30396"
 dependencies = [
+ "bstr",
  "doc-comment",
  "predicates",
  "predicates-core",
@@ -99,9 +100,9 @@ dependencies = [
 
 [[package]]
 name = "assert_fs"
-version = "1.0.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "04dabd011e19821a348abb0dec7b7fda959cd6b3477c474395b958b291942b0e"
+checksum = "3203d5bb9979ac7210f01a150578ebafef6f08b55e79f6db32673c0977b94340"
 dependencies = [
  "doc-comment",
  "globwalk",
@@ -323,9 +324,9 @@ dependencies = [
 
 [[package]]
 name = "bumpalo"
-version = "3.5.0"
+version = "3.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f07aa6688c702439a1be0307b6a94dffe1168569e45b9500c1372bc580740d59"
+checksum = "099e596ef14349721d9016f6b80dd3419ea1bf289ab9b44df8e4dfd3a005d5d9"
 
 [[package]]
 name = "byte-tools"
@@ -391,9 +392,9 @@ dependencies = [
 
 [[package]]
 name = "bzip2-sys"
-version = "0.1.9+1.0.8"
+version = "0.1.10+1.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad3b39a260062fca31f7b0b12f207e8f2590a67d32ec7d59c20484b07ea7285e"
+checksum = "17fa3d1ac1ca21c5c4e36a97f3c3eb25084576f6fc47bf0139c1123434216c6c"
 dependencies = [
  "cc",
  "libc",
@@ -403,11 +404,11 @@ dependencies = [
 [[package]]
 name = "cardano-legacy-address"
 version = "0.1.1"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "cbor_event",
  "chain-ser",
- "cryptoxide 0.2.1",
+ "cryptoxide 0.3.0",
  "ed25519-bip32",
 ]
 
@@ -459,20 +460,20 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 [[package]]
 name = "chain-addr"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "bech32",
  "cfg-if 1.0.0",
  "chain-core",
  "chain-crypto",
- "cryptoxide 0.2.1",
+ "cryptoxide 0.3.0",
  "quickcheck",
 ]
 
 [[package]]
 name = "chain-core"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "chain-ser",
 ]
@@ -480,11 +481,11 @@ dependencies = [
 [[package]]
 name = "chain-crypto"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "bech32",
  "cfg-if 1.0.0",
- "cryptoxide 0.2.1",
+ "cryptoxide 0.3.0",
  "curve25519-dalek",
  "digest 0.9.0",
  "ed25519-bip32",
@@ -501,7 +502,7 @@ dependencies = [
 [[package]]
 name = "chain-impl-mockchain"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "cardano-legacy-address",
  "cfg-if 1.0.0",
@@ -530,7 +531,7 @@ dependencies = [
 [[package]]
 name = "chain-network"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "async-trait",
  "chain-crypto",
@@ -546,12 +547,12 @@ dependencies = [
 [[package]]
 name = "chain-ser"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 
 [[package]]
 name = "chain-storage"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "criterion",
  "data-pile",
@@ -564,7 +565,7 @@ dependencies = [
 [[package]]
 name = "chain-test-utils"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "chain-core",
  "quickcheck",
@@ -574,7 +575,7 @@ dependencies = [
 [[package]]
 name = "chain-time"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "cfg-if 1.0.0",
  "chain-core",
@@ -584,11 +585,13 @@ dependencies = [
 [[package]]
 name = "chain-vote"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
- "cryptoxide 0.2.1",
+ "cryptoxide 0.3.0",
  "eccoxide",
  "rand_core 0.5.1",
+ "rayon",
+ "thiserror",
 ]
 
 [[package]]
@@ -872,9 +875,9 @@ dependencies = [
 
 [[package]]
 name = "data-encoding"
-version = "2.3.1"
+version = "2.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "993a608597367c6377b258c25d7120740f00ed23a2252b729b1932dd7866f908"
+checksum = "3ee2393c4a91429dffb4bedf19f4d6abf27d8a732c8ce4980305d782e5426d57"
 
 [[package]]
 name = "data-pile"
@@ -1116,9 +1119,9 @@ checksum = "37ab347416e802de484e4d03c7316c48f1ecb56574dfd4a46a80f173ce1de04d"
 
 [[package]]
 name = "flate2"
-version = "1.0.19"
+version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7411863d55df97a419aa64cb4d2f167103ea9d767e2c54a1868b7ac3f6b47129"
+checksum = "cd3aec53de10fe96d7d8c565eb17f2c687bb5518a2ec453b5b1252964526abe0"
 dependencies = [
  "cfg-if 1.0.0",
  "crc32fast",
@@ -1362,7 +1365,7 @@ checksum = "c9495705279e7140bf035dde1f6e750c162df8b625267cd52cc44e0b156732c8"
 dependencies = [
  "cfg-if 1.0.0",
  "libc",
- "wasi 0.10.1+wasi-snapshot-preview1",
+ "wasi 0.10.2+wasi-snapshot-preview1",
 ]
 
 [[package]]
@@ -1402,10 +1405,11 @@ dependencies = [
 
 [[package]]
 name = "globwalk"
-version = "0.7.3"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9db17aec586697a93219b19726b5b68307eba92898c34b170857343fe67c99d"
+checksum = "93e3af942408868f6934a7b85134a3230832b9977cf66125df2f9edcfce4ddcc"
 dependencies = [
+ "bitflags",
  "ignore",
  "walkdir",
 ]
@@ -1513,7 +1517,7 @@ dependencies = [
  "http",
  "indexmap",
  "slab",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "tokio-util 0.3.1",
  "tracing",
  "tracing-futures",
@@ -1533,8 +1537,8 @@ dependencies = [
  "http",
  "indexmap",
  "slab",
- "tokio 1.1.0",
- "tokio-util 0.6.2",
+ "tokio 1.1.1",
+ "tokio-util 0.6.3",
  "tracing",
  "tracing-futures",
 ]
@@ -1636,9 +1640,9 @@ dependencies = [
 
 [[package]]
 name = "httparse"
-version = "1.3.4"
+version = "1.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd179ae861f0c2e53da70d892f5f3029f9594be0c41dc5269cd371691b1dc2f9"
+checksum = "615caabe2c3160b313d52ccc905335f4ed5f10881dd63dc5699d47e90be85691"
 
 [[package]]
 name = "httpdate"
@@ -1670,7 +1674,7 @@ dependencies = [
  "itoa",
  "pin-project 1.0.4",
  "socket2",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "tower-service",
  "tracing",
  "want",
@@ -1694,7 +1698,7 @@ dependencies = [
  "itoa",
  "pin-project 1.0.4",
  "socket2",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tower-service",
  "tracing",
  "want",
@@ -1711,7 +1715,7 @@ dependencies = [
  "hyper 0.13.9",
  "log 0.4.14",
  "rustls 0.18.1",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "tokio-rustls 0.14.1",
  "webpki",
 ]
@@ -1767,7 +1771,7 @@ dependencies = [
 [[package]]
 name = "imhamt"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 dependencies = [
  "thiserror",
 ]
@@ -1961,10 +1965,10 @@ dependencies = [
  "structopt",
  "syn 1.0.59",
  "thiserror",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tokio-compat-02",
  "tokio-stream",
- "tokio-util 0.6.2",
+ "tokio-util 0.6.3",
  "tonic",
  "versionisator",
  "warp 0.2.5",
@@ -2009,7 +2013,7 @@ dependencies = [
  "slog-json",
  "structopt",
  "thiserror",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tonic",
  "url",
  "yaml-rust",
@@ -2084,7 +2088,7 @@ dependencies = [
  "slog",
  "structopt",
  "thiserror",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "yaml-rust",
 ]
 
@@ -2139,7 +2143,7 @@ dependencies = [
  "sysinfo 0.15.9",
  "tar",
  "thiserror",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tokio-codec",
  "tokio-stream",
  "tonic",
@@ -2152,7 +2156,7 @@ dependencies = [
 [[package]]
 name = "jortestkit"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/jortestkit.git?branch=master#dc7e6dfe0e787e6839da23baa6261702153cc2d1"
+source = "git+https://github.com/input-output-hk/jortestkit.git?branch=master#21dfa30af6d77ab792f881ee693817f85bc02da9"
 dependencies = [
  "assert_fs",
  "bech32",
@@ -2182,15 +2186,15 @@ dependencies = [
  "sysinfo 0.14.15",
  "tar",
  "thiserror",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "zip",
 ]
 
 [[package]]
 name = "jpeg-decoder"
-version = "0.1.21"
+version = "0.1.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d6187dc218616c3a222bae7b78938f5af5e7c27d9cbef4c30ebca709cd680bf8"
+checksum = "229d53d58899083193af11e15917b5640cd40b29ff475a1fe4ef725deb02d0f2"
 dependencies = [
  "rayon",
 ]
@@ -2275,7 +2279,7 @@ dependencies = [
  "serde",
  "serde_json",
  "thiserror",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "warp 0.2.5",
 ]
 
@@ -2303,9 +2307,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.82"
+version = "0.2.85"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "89203f3fba0a3795506acaad8ebce3c80c0af93f994d5a1d7a0b1eeb23271929"
+checksum = "7ccac4b00700875e6a07c6cde370d44d32fa01c5a65cdd2fca6858c479d28bb3"
 
 [[package]]
 name = "libsystemd-sys"
@@ -2507,7 +2511,7 @@ dependencies = [
  "jortestkit",
  "structopt",
  "thiserror",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "versionisator",
 ]
 
@@ -2520,7 +2524,7 @@ dependencies = [
  "blake2b_simd",
  "blake2s_simd",
  "digest 0.9.0",
- "sha-1 0.9.2",
+ "sha-1 0.9.3",
  "sha2",
  "sha3",
  "unsigned-varint",
@@ -2981,9 +2985,9 @@ checksum = "ac74c624d6b2d21f425f752262f42188365d7b8ff1aff74c82e45136510a4857"
 
 [[package]]
 name = "predicates"
-version = "1.0.6"
+version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73dd9b7b200044694dfede9edf907c1ca19630908443e9447e624993700c6932"
+checksum = "eeb433456c1a57cc93554dea3ce40b4c19c4057e41c55d4a0f3d84ea71c325aa"
 dependencies = [
  "difference",
  "float-cmp",
@@ -2994,15 +2998,15 @@ dependencies = [
 
 [[package]]
 name = "predicates-core"
-version = "1.0.1"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fb3dbeaaf793584e29c58c7e3a82bbb3c7c06b63cea68d13b0e3cddc124104dc"
+checksum = "57e35a3326b75e49aa85f5dc6ec15b41108cf5aee58eabb1f274dd18b73c2451"
 
 [[package]]
 name = "predicates-tree"
-version = "1.0.1"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aee95d988ee893cb35c06b148c80ed2cd52c8eea927f50ba7a0be1a786aeab73"
+checksum = "15f553275e5721409451eb85e15fd9a860a6e5ab4496eb215987502b5f5391f2"
 dependencies = [
  "predicates-core",
  "treeline",
@@ -3432,7 +3436,7 @@ dependencies = [
  "serde",
  "serde_json",
  "serde_urlencoded 0.7.0",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "tokio-rustls 0.14.1",
  "url",
  "wasm-bindgen",
@@ -3444,9 +3448,9 @@ dependencies = [
 
 [[package]]
 name = "ring"
-version = "0.16.19"
+version = "0.16.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "024a1e66fea74c66c66624ee5622a7ff0e4b73a13b4f5c326ddb50c708944226"
+checksum = "3053cf52e236a3ed746dfc745aa9cacf1b791d846bdaf412f60a8d7d6e17c8fc"
 dependencies = [
  "cc",
  "libc",
@@ -3661,9 +3665,9 @@ dependencies = [
 
 [[package]]
 name = "serde_yaml"
-version = "0.8.15"
+version = "0.8.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "971be8f6e4d4a47163b405a3df70d14359186f9ab0f3a3ec37df144ca1ce089f"
+checksum = "bdd2af560da3c1fdc02cb80965289254fc35dff869810061e2d8290ee48848ae"
 dependencies = [
  "dtoa",
  "linked-hash-map",
@@ -3693,9 +3697,9 @@ dependencies = [
 
 [[package]]
 name = "sha-1"
-version = "0.9.2"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ce3cdf1b5e620a498ee6f2a171885ac7e22f0e12089ec4b3d22b84921792507c"
+checksum = "f4b312c3731e3fe78a185e6b9b911a7aa715b8e31cce117975219aab2acf285d"
 dependencies = [
  "block-buffer 0.9.0",
  "cfg-if 1.0.0",
@@ -3706,9 +3710,9 @@ dependencies = [
 
 [[package]]
 name = "sha2"
-version = "0.9.2"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e7aab86fe2149bad8c507606bdb3f4ef5e7b2380eb92350f56122cca72a42a8"
+checksum = "fa827a14b29ab7f44778d14a88d3cb76e949c45083f7dbfa507d0cb699dc12de"
 dependencies = [
  "block-buffer 0.9.0",
  "cfg-if 1.0.0",
@@ -3887,7 +3891,7 @@ dependencies = [
 [[package]]
 name = "sparse-array"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 
 [[package]]
 name = "spin"
@@ -3958,7 +3962,7 @@ checksum = "1e81da0851ada1f3e9d4312c704aa4f8806f0f9d69faaf8df2f3464b4a9437c2"
 [[package]]
 name = "symmetric-cipher"
 version = "0.5.0"
-source = "git+https://github.com/input-output-hk/chain-wallet-libs.git?branch=master#250973e0d8d988bd6ef3403912f1ea1b7d584dbd"
+source = "git+https://github.com/input-output-hk/chain-wallet-libs.git?branch=master#26879c3977450443ba4241b36758f7b4d771c869"
 dependencies = [
  "cryptoxide 0.2.1",
  "rand 0.7.3",
@@ -4219,9 +4223,9 @@ checksum = "cda74da7e1a664f795bb1f8a87ec406fb89a02522cf6e50620d016add6dbbf5c"
 
 [[package]]
 name = "tokio"
-version = "0.2.24"
+version = "0.2.25"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "099837d3464c16a808060bb3f02263b412f6fafcb5d01c533d309985fbeebe48"
+checksum = "6703a273949a90131b290be1fe7b039d0fc884aa1935860dfcbe056f28cd8092"
 dependencies = [
  "bytes 0.5.6",
  "fnv",
@@ -4238,9 +4242,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.1.0"
+version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8efab2086f17abcddb8f756117665c958feee6b2e39974c2f1600592ab3a4195"
+checksum = "6714d663090b6b0acb0fa85841c6d66233d150cdb2602c8f9b8abb03370beb3f"
 dependencies = [
  "autocfg",
  "bytes 1.0.1",
@@ -4276,8 +4280,8 @@ dependencies = [
  "bytes 0.5.6",
  "once_cell",
  "pin-project-lite 0.2.4",
- "tokio 0.2.24",
- "tokio 1.1.0",
+ "tokio 0.2.25",
+ "tokio 1.1.1",
  "tokio-stream",
 ]
 
@@ -4322,7 +4326,7 @@ checksum = "e12831b255bcfa39dc0436b01e19fea231a37db570686c06ee72c423479f889a"
 dependencies = [
  "futures-core",
  "rustls 0.18.1",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "webpki",
 ]
 
@@ -4333,7 +4337,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bc6844de72e57df1980054b38be3a9f4702aba4858be64dd700181a8a6d0e1b6"
 dependencies = [
  "rustls 0.19.0",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "webpki",
 ]
 
@@ -4345,7 +4349,7 @@ checksum = "76066865172052eb8796c686f0b441a93df8b08d40a950b062ffb9a426f00edd"
 dependencies = [
  "futures-core",
  "pin-project-lite 0.2.4",
- "tokio 1.1.0",
+ "tokio 1.1.1",
 ]
 
 [[package]]
@@ -4357,7 +4361,7 @@ dependencies = [
  "futures-util",
  "log 0.4.14",
  "pin-project 0.4.27",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "tungstenite 0.11.1",
 ]
 
@@ -4370,7 +4374,7 @@ dependencies = [
  "futures-util",
  "log 0.4.14",
  "pin-project 1.0.4",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tungstenite 0.12.0",
 ]
 
@@ -4385,24 +4389,22 @@ dependencies = [
  "futures-sink",
  "log 0.4.14",
  "pin-project-lite 0.1.11",
- "tokio 0.2.24",
+ "tokio 0.2.25",
 ]
 
 [[package]]
 name = "tokio-util"
-version = "0.6.2"
+version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "feb971a26599ffd28066d387f109746df178eff14d5ea1e235015c5601967a4b"
+checksum = "ebb7cb2f00c5ae8df755b252306272cd1790d39728363936e01827e11f0b017b"
 dependencies = [
- "async-stream",
  "bytes 1.0.1",
  "futures-core",
  "futures-sink",
  "log 0.4.14",
  "pin-project-lite 0.2.4",
  "slab",
- "tokio 1.1.0",
- "tokio-stream",
+ "tokio 1.1.1",
 ]
 
 [[package]]
@@ -4434,9 +4436,9 @@ dependencies = [
  "pin-project 1.0.4",
  "prost",
  "prost-derive",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tokio-stream",
- "tokio-util 0.6.2",
+ "tokio-util 0.6.3",
  "tower",
  "tower-service",
  "tracing",
@@ -4467,7 +4469,7 @@ dependencies = [
  "pin-project 1.0.4",
  "rand 0.8.3",
  "slab",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tokio-stream",
  "tower-layer",
  "tower-service",
@@ -4555,7 +4557,7 @@ dependencies = [
  "input_buffer 0.3.1",
  "log 0.4.14",
  "rand 0.7.3",
- "sha-1 0.9.2",
+ "sha-1 0.9.3",
  "url",
  "utf-8",
 ]
@@ -4574,7 +4576,7 @@ dependencies = [
  "input_buffer 0.4.0",
  "log 0.4.14",
  "rand 0.8.3",
- "sha-1 0.9.2",
+ "sha-1 0.9.3",
  "url",
  "utf-8",
 ]
@@ -4591,7 +4593,7 @@ dependencies = [
 [[package]]
 name = "typed-bytes"
 version = "0.1.0"
-source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#abb5e0d470be99d66e5604c722eaef575f4d9fc1"
+source = "git+https://github.com/input-output-hk/chain-libs.git?branch=master#fd9da3b92337ff72653b32b0937836e3fa14b731"
 
 [[package]]
 name = "typenum"
@@ -4834,7 +4836,7 @@ dependencies = [
  "serde",
  "serde_json",
  "serde_urlencoded 0.6.1",
- "tokio 0.2.24",
+ "tokio 0.2.25",
  "tokio-rustls 0.14.1",
  "tokio-tungstenite 0.11.0",
  "tower-service",
@@ -4864,11 +4866,11 @@ dependencies = [
  "serde",
  "serde_json",
  "serde_urlencoded 0.7.0",
- "tokio 1.1.0",
+ "tokio 1.1.1",
  "tokio-rustls 0.22.0",
  "tokio-stream",
  "tokio-tungstenite 0.13.0",
- "tokio-util 0.6.2",
+ "tokio-util 0.6.3",
  "tower-service",
  "tracing",
  "tracing-futures",
@@ -4882,9 +4884,9 @@ checksum = "cccddf32554fecc6acb585f82a32a72e28b48f8c4c1883ddfeeeaa96f7d8e519"
 
 [[package]]
 name = "wasi"
-version = "0.10.1+wasi-snapshot-preview1"
+version = "0.10.2+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "93c6c3420963c5c64bca373b25e77acb562081b9bb4dd5bb864187742186cea9"
+checksum = "fd6fbd9a79829dd1ad0cc20627bf1ed606756a7f77edff7b66b7064f9cb327c6"
 
 [[package]]
 name = "wasm-bindgen"
