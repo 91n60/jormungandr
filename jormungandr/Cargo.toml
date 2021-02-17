@@ -13,9 +13,8 @@ edition = "2018"
 
 [dependencies]
 arc-swap = "^1.1.0"
-juniper = "0.15.2"
-syn = "=1.0.59" # Remove this when juniper is updated, or better, gone forever
-juniper_warp = "0.6.1"
+async-graphql = "2.5.1"
+async-graphql-warp = "2.5.2"
 base64 = "0.13.0"
 bincode = "1.2.1"
 bytes = "1.0"
@@ -61,7 +60,7 @@ tokio-util = { version = "0.6.0", features = ["time"] }
 tonic = "0.4"
 async-trait = "0.1"
 lru = "^0.6.1"
-warp = { version = "0.2", features = ["tls"] }
+warp = { version = "0.3.0", features = ["tls"] }
 pin-project = "1.0"
 tokio-compat-02 = "0.2.0"
 
