@@ -1,6 +1,11 @@
 use async_graphql::*;
 use std::convert::TryFrom;
 
+#[derive(SimpleObject)]
+pub struct ConnectionFields<C: OutputType + Send + Sync> {
+    pub total_count: C,
+}
+
 pub struct ValidatedPaginationArguments<I> {
     pub first: Option<usize>,
     pub last: Option<usize>,
@@ -86,7 +91,7 @@ where
                 lower_bound,
             } = total_elements;
 
-            let page = compute_range_boundaries(total_elements, pagination_arguments)?;
+            let page = compute_range_boundaries(total_elements, pagination_arguments);
 
             let has_next_page = page.upper_bound < upper_bound;
             let has_previous_page = page.lower_bound > lower_bound;
