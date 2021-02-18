@@ -1665,9 +1665,9 @@ dependencies = [
  "futures-util",
  "hyper 0.14.2",
  "log 0.4.14",
- "rustls 0.19.0",
+ "rustls",
  "tokio 1.1.0",
- "tokio-rustls 0.22.0",
+ "tokio-rustls",
  "webpki",
 ]
 
@@ -1902,7 +1902,7 @@ dependencies = [
  "rand_chacha 0.2.2",
  "rand_core 0.5.1",
  "reqwest",
- "rustls 0.19.0",
+ "rustls",
  "serde",
  "serde_derive",
  "serde_json",
@@ -1923,7 +1923,7 @@ dependencies = [
  "tracing-journald",
  "tracing-subscriber",
  "versionisator",
- "warp 0.2.5",
+ "warp 0.3.0",
 ]
 
 [[package]]
@@ -3373,12 +3373,12 @@ dependencies = [
  "mime",
  "percent-encoding 2.1.0",
  "pin-project-lite 0.2.4",
- "rustls 0.19.0",
+ "rustls",
  "serde",
  "serde_json",
  "serde_urlencoded 0.7.0",
  "tokio 1.1.0",
- "tokio-rustls 0.22.0",
+ "tokio-rustls",
  "url",
  "wasm-bindgen",
  "wasm-bindgen-futures",
@@ -3415,19 +3415,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "138e3e0acb6c9fb258b19b67cb8abd63c00679d2851805ea151465464fe9030a"
 dependencies = [
  "semver 0.9.0",
-]
-
-[[package]]
-name = "rustls"
-version = "0.18.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5d1126dcf58e93cee7d098dbda643b5f92ed724f1f6a63007c1116eed6700c81"
-dependencies = [
- "base64 0.12.3",
- "log 0.4.14",
- "ring",
- "sct",
- "webpki",
 ]
 
 [[package]]
@@ -4193,23 +4180,11 @@ dependencies = [
 
 [[package]]
 name = "tokio-rustls"
-version = "0.14.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e12831b255bcfa39dc0436b01e19fea231a37db570686c06ee72c423479f889a"
-dependencies = [
- "futures-core",
- "rustls 0.18.1",
- "tokio 0.2.24",
- "webpki",
-]
-
-[[package]]
-name = "tokio-rustls"
 version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bc6844de72e57df1980054b38be3a9f4702aba4858be64dd700181a8a6d0e1b6"
 dependencies = [
- "rustls 0.19.0",
+ "rustls",
  "tokio 1.1.0",
  "webpki",
 ]
@@ -4793,7 +4768,6 @@ dependencies = [
  "serde_json",
  "serde_urlencoded 0.6.1",
  "tokio 0.2.24",
- "tokio-rustls 0.14.1",
  "tokio-tungstenite 0.11.0",
  "tower-service",
  "tracing",
@@ -4823,6 +4797,7 @@ dependencies = [
  "serde_json",
  "serde_urlencoded 0.7.0",
  "tokio 1.1.0",
+ "tokio-rustls",
  "tokio-stream",
  "tokio-tungstenite 0.13.0",
  "tokio-util 0.6.2",
